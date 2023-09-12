@@ -4,7 +4,8 @@ const git  = document.querySelector(".git");
 
 function formatTime(date) {
    const hours12 = date.getHours() % 12 || 12;
-   const minutes = date.getMinutes(); 
+   const minutes = date.getMinutes();
+   const seconds = date.getSeconds(); 
    const isAm = date.getHours() < 12;
 
     return `${hours12.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")} ${isAm ? "AM" : "PM"}`;
